@@ -34,7 +34,7 @@ const RegisterModal = () => {
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     setIsLoading(true)
     axios
-      .post('/api/register, data')
+      .post('/api/register', data)
       .then((res) => {
         registerModal.onClose()
       })
@@ -59,14 +59,14 @@ const RegisterModal = () => {
       />
       <Input
         id="name"
-        label="name"
+        label="Name"
         disabled={isLoading}
         register={register}
         errors={errors}
         required
       />
       <Input
-        id="password]"
+        id="password"
         label="Password"
         type="password"
         disabled={isLoading}
