@@ -11,7 +11,7 @@ import axios from 'axios'
 import useRegisterModal from '../../hooks/useRegisterModal'
 import Modal from './Modal'
 import Heading from '../Heading'
-import Input from '../Input'
+import Input from '../input/Input'
 import Button from '../Button'
 import useLoginModal from '@/app/hooks/useLoginModal'
 

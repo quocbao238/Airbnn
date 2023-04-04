@@ -8,7 +8,7 @@ import { FieldValues, SubmitHandler, useForm } from 'react-hook-form'
 
 import Modal from './Modal'
 import Heading from '../Heading'
-import Input from '../Input'
+import Input from '../input/Input'
 import { toast } from 'react-hot-toast'
 import Button from '../Button'
 import useLoginModal from '@/app/hooks/useLoginModal'
