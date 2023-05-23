@@ -10,6 +10,10 @@ import LoginModal from './components/modals/LoginModal'
 import getCurrentUser from './actions/getCurrentUser'
 import RentModal from './components/modals/RentModal'
 
+
+// https://www.youtube.com/watch?v=c_-b_isI4vg&t=16104s
+
+
 export const metadata = {
   title: 'Airbnb',
   description: 'Airbnb clone',
@@ -36,7 +40,10 @@ export default async function RootLayout({
           <LoginModal />
           <Navbar currentUser={currentUser} />
         </ClientOnly>
-        {children}
+
+        <div className='pb-20 pt-28'>
+          {children}
+        </div>
       </body>
     </html>
   )

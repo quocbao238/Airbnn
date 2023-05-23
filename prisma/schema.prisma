@@ -21,7 +21,6 @@ model User {
   createdAt DateTime @default(now()) 
   updatedAt DateTime @updatedAt
   favoriteIds String[] @db.ObjectId
-
   accounts Account[]
   listings Listing[]
   reservations  Reservation[]
@@ -45,24 +44,22 @@ model Account {
   @@unique([provider, providerAccountId])
 }
 
-model Listing{
-  id String @id @default(auto()) @map("_id") @db.ObjectId
+model Listing {
+  id  String @id @default(auto()) @map("_id") @db.ObjectId
   title String
   description String
   imageSrc String
   createdAt DateTime @default(now())
-  category String
+  category  String
   roomCount Int
-  bathRoomCount Int
+  bathroomCount Int
   guestCount Int
-  localtionValue String
+  locationValue String
   userId String @db.ObjectId
   price Int
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
-
   reservations Reservation[]
-
 }
 
 model Reservation{
