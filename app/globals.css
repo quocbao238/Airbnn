@@ -14,3 +14,16 @@ root {
 .leaflet-top {
     z-index: 0 !important;
 }
+
+@media (pointer:none), (pointer:coarse) {
+    .category-scroll-horizontal {
+        overflow-x: scroll;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    }
+    .category-scroll-horizontal::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+
+}
